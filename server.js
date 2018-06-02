@@ -1,6 +1,7 @@
 const express = require('express');
-var path = require('path');
+const path = require('path');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -15,6 +16,6 @@ app.get('/', (require, response) => {
 });
 
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
