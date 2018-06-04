@@ -15,7 +15,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', async (err, client) => 
     // }
 
     try {
-        const count = await db.collection('Todos').find().count();
+        const count = await db.collection('todos').find().count();
         console.log('Todos');
         console.log(count);
     } catch (err) {
